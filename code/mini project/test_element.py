@@ -3,7 +3,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-@pytest.test.case
 def test_open_login():
     driver=webdriver.Chrome()
     driver.get("https://app.vwo.com/#/login")
@@ -30,6 +29,8 @@ def test_open_login():
 
     on_submit=driver.find_element(By.ID,"js-login-btn")
     on_submit.click()
+
+
 
     time.sleep(10)
     driver.quit()
